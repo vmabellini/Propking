@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propking.Api", "Propking.Api\Propking.Api.csproj", "{421283E1-D351-488C-BD75-5BD0EFDB8837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Propking.Api", "Propking.Api\Propking.Api.csproj", "{421283E1-D351-488C-BD75-5BD0EFDB8837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propking.Domain", "Propking.Domain\Propking.Domain.csproj", "{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
