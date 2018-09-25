@@ -23,11 +23,19 @@ namespace Propking.Domain.Models
             var buyTotal = 0m;
             foreach (var change in Changes)
             {
-                summary.Quantity += change.Quantity;
-                buyTotal += (change.UnitValue * change.Quantity);
+                if (change.ChangeType == PositionChange.PositionChangeType.Buy)
+                {
+                    summary.Quantity += change.Quantity;
+                    buyTotal += (change.UnitValue * change.Quantity);
+                }
+                else if (change.ChangeType == PositionChange.PositionChangeType.Sell)
+                {
+                    summary.Quantity -= change.Quantity;
+                    buyTotal -= (change.UnitValue * change.Quantity);
+                }
             }
 
-            summary.MediumPrice = buyTotal / summary.Quantity;
+            summary.MediumPrice = Math.Round(buyTotal / summary.Quantity, 2, MidpointRounding.AwayFromZero);
 
             return summary;
         }
