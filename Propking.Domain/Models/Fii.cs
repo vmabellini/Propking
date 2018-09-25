@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Propking.Domain
+namespace Propking.Domain.Models
 {
     public class Fii
     {
