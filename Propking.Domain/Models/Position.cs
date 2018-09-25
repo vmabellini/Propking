@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Propking.Domain.Models
 {
-    public class Position
+    public partial class Position : IEntity
     {
         public Position()
         {
@@ -16,9 +16,9 @@ namespace Propking.Domain.Models
         public virtual Fii Fii { get; set; }
         public virtual ICollection<PositionChange> Changes { get; set; }
 
-        public PositionSummary CalculateSummary()
+        public Summary CalculateSummary()
         {
-            var summary = new PositionSummary();
+            var summary = new Summary();
 
             var buyTotal = 0m;
             foreach (var change in Changes)
@@ -35,9 +35,20 @@ namespace Propking.Domain.Models
                 }
             }
 
+            if (summary.Quantity < 0)
+            {
+                throw new InvalidOperationException("Position summary error: negative quantity");
+            }
+
             summary.MediumPrice = Math.Round(buyTotal / summary.Quantity, 2, MidpointRounding.AwayFromZero);
 
             return summary;
+        }
+
+        public class Summary
+        {
+            public int Quantity { get; set; }
+            public decimal MediumPrice { get; set; }
         }
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Propking.Domain.Models
+﻿namespace Propking.Domain.Models
 {
-    public class PositionChange
+    public class PositionChange : IEntity
     {
+        public int Id { get; set; }
         public int FiiId { get; set; }
         public Fii Fii { get; set; }
         public PositionChangeType ChangeType { get; set; }

@@ -1,5 +1,6 @@
 using Propking.Domain.Models;
 using Shouldly;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Xunit;
@@ -8,9 +9,9 @@ namespace Propking.Tests
 {
     public class PositionTests
     {
-        public class TestDataGenerator : IEnumerable<object[]>
+        public class PositionSummaryDataGenerator : IEnumerable<object[]>
         {
-            public TestDataGenerator()
+            public PositionSummaryDataGenerator()
             {
                 //Start theories
 
@@ -109,13 +110,32 @@ namespace Propking.Tests
         }
 
         [Theory]
-        [ClassData(typeof(TestDataGenerator))]
+        [ClassData(typeof(PositionSummaryDataGenerator))]
         public void Deve_calcular_posicao(Position position, decimal mediumPrice, int quantity)
         {
             var summary = position.CalculateSummary();
 
             summary.MediumPrice.ShouldBe(mediumPrice);
             summary.Quantity.ShouldBe(quantity);
+        }
+
+        [Fact]
+        public void Deve_retornar_erro_para_quantidade_negativa()
+        {
+            var position = new Position()
+            {
+                Changes = new List<PositionChange>() {
+                                    new PositionChange()
+                                    {
+                                        ChangeType = PositionChange.PositionChangeType.Buy,
+                                        Quantity = -10,
+                                        UnitValue = 9.99m,
+                                        FiiId = 1
+                                    }
+                                }
+            };
+
+            Assert.Throws<InvalidOperationException>(() => position.CalculateSummary());
         }
     }
 }
