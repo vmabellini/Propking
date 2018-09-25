@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Wallet\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
