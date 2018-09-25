@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Propking.Domain.Models
+namespace Propking.Api.Models
 {
     public partial class Position : IEntity
     {

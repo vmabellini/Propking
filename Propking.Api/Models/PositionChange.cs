@@ -1,4 +1,4 @@
-﻿namespace Propking.Domain.Models
+﻿namespace Propking.Api.Models
 {
     public class PositionChange : IEntity
     {

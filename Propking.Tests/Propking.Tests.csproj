@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Propking.Api\Propking.Api.csproj" />
-    <ProjectReference Include="..\Propking.Domain\Propking.Domain.csproj" />
   </ItemGroup>
 
 </Project>

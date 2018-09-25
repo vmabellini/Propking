@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Propking.Api", "Propking.Api\Propking.Api.csproj", "{421283E1-D351-488C-BD75-5BD0EFDB8837}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Propking.Domain", "Propking.Domain\Propking.Domain.csproj", "{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Propking.Tests", "Propking.Tests\Propking.Tests.csproj", "{05ECF122-14E6-45FD-B605-4B98685C44E9}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{421283E1-D351-488C-BD75-5BD0EFDB8837}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DA9DBC8-6EC4-45CE-BDE1-A311059EB0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05ECF122-14E6-45FD-B605-4B98685C44E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05ECF122-14E6-45FD-B605-4B98685C44E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05ECF122-14E6-45FD-B605-4B98685C44E9}.Release|Any CPU.ActiveCfg = Release|Any CPU

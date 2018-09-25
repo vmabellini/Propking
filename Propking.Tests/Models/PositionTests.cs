@@ -1,4 +1,4 @@
-using Propking.Domain.Models;
+using Propking.Api.Models;
 using Shouldly;
 using System;
 using System.Collections;
