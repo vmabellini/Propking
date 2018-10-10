@@ -2,21 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MediatR;
 
-namespace Propking.Api.Controllers
+namespace Propking.Api.Features.Wallet
 {
-    [Produces("application/json")]
     [Route("api/wallet")]
+    [ApiController]
     public class WalletController : ControllerBase
     {
         private readonly IMediator _mediator;
 
         public WalletController(IMediator mediator)
         {
-            this._mediator = mediator;
+            _mediator = mediator;
+        }
+
+        public async Task<ActionResult<Index.Model>> Index()
+        {
+            var results = await _mediator.Send(new Index.Query());
+            return results;
         }
     }
 }
