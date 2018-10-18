@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Propking.Api.Migrations
 {
@@ -12,7 +11,7 @@ namespace Propking.Api.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Code = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     CategoryTag = table.Column<string>(nullable: true)
@@ -27,7 +26,7 @@ namespace Propking.Api.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Sqlite:Autoincrement", true),
                     FiiId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -46,7 +45,7 @@ namespace Propking.Api.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Sqlite:Autoincrement", true),
                     FiiId = table.Column<int>(nullable: false),
                     ChangeType = table.Column<int>(nullable: false),
                     UnitValue = table.Column<decimal>(nullable: false),

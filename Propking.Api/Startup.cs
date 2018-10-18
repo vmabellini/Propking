@@ -30,7 +30,7 @@ namespace Propking.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SystemContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlite("Data Source=propking.db"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Propking.Api.Features.Wallet
+namespace Propking.Api.Features.Position
 {
     public class Index
     {

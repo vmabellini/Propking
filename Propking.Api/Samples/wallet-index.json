@@ -1,0 +1,11 @@
+{
+  "fiis": [
+    {
+      "code": "ABCP11",
+      "quantity": 127,
+      "currentPrice": 10.00,
+      "currentTotal": 1270.00,
+      "classification": "Shopping Center"
+    }
+  ]
+}

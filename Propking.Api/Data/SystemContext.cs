@@ -12,6 +12,7 @@ namespace Propking.Api.Data
 
         public SystemContext(DbContextOptions<SystemContext> options) : base(options)
         {
+
         }
 
         public DbSet<Fii> Fiis { get; set; }
